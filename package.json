@@ -9,8 +9,8 @@
     "prebuild": "npm run clean && npm run copy",
     "build": "parcel build src/index.html --out-dir ./dist/assets --public-url /assets --detailed-report",
     "postbuild": "mv dist/assets/index.html dist/index.html",
-    "clean": "shx rm -rf dist/*",
-    "copy": "cp  -r static/ dist/",
+    "clean": "shx rm -rf dist",
+    "copy": "shx cp -r static/ dist/",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
