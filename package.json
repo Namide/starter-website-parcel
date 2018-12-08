@@ -8,7 +8,7 @@
     "dev": "parcel src/index.html -p 1234 --open",
     "prebuild": "npm run clean && npm run copy",
     "build": "parcel build src/index.html --out-dir ./dist/assets --public-url /assets --detailed-report",
-    "postbuild": "mv dist/assets/index.html dist/index.html",
+    "postbuild": "shx mv dist/assets/index.html dist/index.html",
     "clean": "shx rm -rf dist",
     "copy": "shx cp -r static/ dist/",
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -17,7 +17,12 @@
     "type": "git",
     "url": "git+https://github.com/Namide/starter-website-parcel.git"
   },
-  "keywords": ["parceljs", "nodejs", "starter", "website"],
+  "keywords": [
+    "parceljs",
+    "nodejs",
+    "starter",
+    "website"
+  ],
   "author": "Namide (Damien Doussaud)",
   "license": "MIT",
   "bugs": {
